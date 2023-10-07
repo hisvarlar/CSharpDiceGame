@@ -1,9 +1,14 @@
+using System.Reflection;
 using System.Windows.Forms.VisualStyles;
 
 namespace ZarOyunu
 {
     public partial class Form1 : Form
     {
+
+        string path = new DirectoryInfo("../../../images/").FullName;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -29,55 +34,8 @@ namespace ZarOyunu
             sum1 = sum1 + a + b;
             label4.Text = sum1.ToString();
 
-            if (a == 1)
-            {
-                pictureBox1.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\1.png";
-            }
-            if (a == 2)
-            {
-                pictureBox1.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\2.png";
-            }
-            if (a == 3)
-            {
-                pictureBox1.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\3.png";
-            }
-            if (a == 4)
-            {
-                pictureBox1.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\4.png";
-            }
-            if (a == 5)
-            {
-                pictureBox1.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\5.png";
-            }
-            if (a == 6)
-            {
-                pictureBox1.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\6.png";
-            }
-
-            if (b == 1)
-            {
-                pictureBox2.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\1.png";
-            }
-            if (b == 2)
-            {
-                pictureBox2.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\2.png";
-            }
-            if (b == 3)
-            {
-                pictureBox2.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\3.png";
-            }
-            if (b == 4)
-            {
-                pictureBox2.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\4.png";
-            }
-            if (b == 5)
-            {
-                pictureBox2.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\5.png";
-            }
-            if (b == 6)
-            {
-                pictureBox2.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\6.png";
-            }
+            pictureBox1.ImageLocation = path + a.ToString() + ".jpg";
+            pictureBox2.ImageLocation = path + b.ToString() + ".jpg";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -90,55 +48,8 @@ namespace ZarOyunu
             sum2 = sum2 + c + d;
             label5.Text = sum2.ToString();
 
-            if (c == 1)
-            {
-                pictureBox3.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\1.png";
-            }
-            if (c == 2)
-            {
-                pictureBox3.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\2.png";
-            }
-            if (c == 3)
-            {
-                pictureBox3.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\3.png";
-            }
-            if (c == 4)
-            {
-                pictureBox3.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\4.png";
-            }
-            if (c == 5)
-            {
-                pictureBox3.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\5.png";
-            }
-            if (c == 6)
-            {
-                pictureBox3.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\6.png";
-            }
-
-            if (d == 1)
-            {
-                pictureBox4.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\1.png";
-            }
-            if (d == 2)
-            {
-                pictureBox4.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\2.png";
-            }
-            if (d == 3)
-            {
-                pictureBox4.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\3.png";
-            }
-            if (d == 4)
-            {
-                pictureBox4.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\4.png";
-            }
-            if (d == 5)
-            {
-                pictureBox4.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\5.png";
-            }
-            if (d == 6)
-            {
-                pictureBox4.ImageLocation = "C:\\Users\\LenovoNB\\source\\repos\\ZarOyunu\\ZarOyunu\\obj\\Zarlar\\6.png";
-            }
+            pictureBox3.ImageLocation = path + c.ToString() + ".jpg";
+            pictureBox4.ImageLocation = path + d.ToString() + ".jpg";
 
             if (sum1 > 49 || sum2 > 49)
             {
